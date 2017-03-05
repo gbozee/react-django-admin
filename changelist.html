@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Select user to change | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="/static/admin/css/changelists.css" />
+  
+  
+    <script type="text/javascript" src="/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+
+
+<body class=" app-auth model-user change-list"
+  data-admin-utc-offset="3600">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Django administration</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>biola</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Change password</a> /
+                
+                <a href="/admin/logout/">Log out</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/admin/">Home</a>
+&rsaquo; <a href="/admin/auth/">Authentication and Authorization</a>
+&rsaquo; Users
+</div>
+
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="flex">
+        
+        <h1>Select user to change</h1>
+        
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+            <li>
+              
+              <a href="/admin/auth/user/add/" class="addlink">
+                Add user
+              </a>
+            </li>
+            
+          
+        </ul>
+    
+    
+    <div class="module filtered" id="changelist">
+      
+
+<div id="toolbar"><form id="changelist-search" method="get">
+<div><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="/static/admin/img/search.svg" alt="Search" /></label>
+<input type="text" size="40" name="q" value="" id="searchbar" autofocus />
+<input type="submit" value="Search" />
+
+
+</div>
+</form></div>
+
+
+      
+
+
+      
+        
+          <div id="changelist-filter">
+            <h2>Filter</h2>
+            
+<h3> By staff status </h3>
+<ul>
+
+    <li class="selected">
+    <a href="?">All</a></li>
+
+    <li>
+    <a href="?is_staff__exact=1">Yes</a></li>
+
+    <li>
+    <a href="?is_staff__exact=0">No</a></li>
+
+</ul>
+
+<h3> By superuser status </h3>
+<ul>
+
+    <li class="selected">
+    <a href="?">All</a></li>
+
+    <li>
+    <a href="?is_superuser__exact=1">Yes</a></li>
+
+    <li>
+    <a href="?is_superuser__exact=0">No</a></li>
+
+</ul>
+
+<h3> By active </h3>
+<ul>
+
+    <li class="selected">
+    <a href="?">All</a></li>
+
+    <li>
+    <a href="?is_active__exact=1">Yes</a></li>
+
+    <li>
+    <a href="?is_active__exact=0">No</a></li>
+
+</ul>
+
+          </div>
+        
+      
+
+      <form id="changelist-form" method="post" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='hJKD3dF36jUdr0SKf03HsQDPTnhLb6W2nFzbQFpugfioOMbmbRGkVLtQCt9HHPfT' />
+      
+
+      
+          
+<div class="actions">
+    <label>Action: <select name="action" required>
+<option value="" selected="selected">---------</option>
+<option value="delete_selected">Delete selected users</option>
+</select></label><input class="select-across" name="select_across" type="hidden" value="0" />
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+        <span class="action-counter" data-actions-icnt="1">0 of 1 selected</span>
+        
+    
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col"  class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" /></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-username sorted ascending">
+   
+     
+       <div class="sortoptions">
+         <a class="sortremove" href="?o=" title="Remove from sorting"></a>
+         
+         <a href="?o=-1" class="toggle ascending" title="Toggle sorting"></a>
+       </div>
+     
+   
+   <div class="text"><a href="?o=-1">Username</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-email">
+   
+     
+   
+   <div class="text"><a href="?o=2.1">Email address</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-first_name">
+   
+     
+   
+   <div class="text"><a href="?o=3.1">First name</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-last_name">
+   
+     
+   
+   <div class="text"><a href="?o=4.1">Last name</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-is_staff">
+   
+     
+   
+   <div class="text"><a href="?o=5.1">Staff status</a></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr class="row1"><td class="action-checkbox"><input class="action-select" name="_selected_action" type="checkbox" value="1" /></td><th class="field-username"><a href="/admin/auth/user/1/change/">biola</a></th><td class="field-email">gbozee@example.com</td><td class="field-first_name">&nbsp;</td><td class="field-last_name">&nbsp;</td><td class="field-is_staff"><img src="/static/admin/img/icon-yes.svg" alt="True" /></td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+      
+      
+
+<p class="paginator">
+
+1 user
+
+
+</p>
+
+      </form>
+    </div>
+  </div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+
+<link rel="stylesheet" href="/static/debug_toolbar/css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="/static/debug_toolbar/css/toolbar.css" type="text/css" />
+
+<!-- Prevent our copy of jQuery from registering as an AMD module on sites that use RequireJS. -->
+<script src="/static/debug_toolbar/js/jquery_pre.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/static/debug_toolbar/js/jquery_post.js"></script>
+
+<script src="/static/debug_toolbar/js/toolbar.js"></script>
+<div id="djDebug" class="djdt-hidden" dir="ltr"
+     data-store-id="f2ed0091ab7c46468d9a82a27760ad84" data-render-panel-url="/__debug__/render_panel/"
+     >
+	<div class="djdt-hidden" id="djDebugToolbar">
+		<ul id="djDebugPanelList">
+			
+			<li><a id="djHideToolBarButton" href="#" title="Hide toolbar">Hide &#187;</a></li>
+			
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtVersionsPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Versions" class="VersionsPanel">
+					
+					Versions
+					
+					
+						<br /><small>Django 1.10.6</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtTimerPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<div class="djdt-contentless">
+					
+					Time
+					
+					
+						<br /><small>Total: 144.91ms</small>
+					
+					
+					
+						</div>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtSettingsPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Settings from &lt;code&gt;admin_app.settings&lt;/code&gt;" class="SettingsPanel">
+					
+					Settings
+					
+					
+						
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtHeadersPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Headers" class="HeadersPanel">
+					
+					Headers
+					
+					
+						
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtRequestPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Request" class="RequestPanel">
+					
+					Request
+					
+					
+						<br /><small>changelist_view</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtSQLPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="SQL queries from 1 connection" class="SQLPanel">
+					
+					SQL
+					
+					
+						<br /><small>6 queries in 1.50ms</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtStaticFilesPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Static files (78 found, 12 used)" class="StaticFilesPanel">
+					
+					Static files
+					
+					
+						<br /><small>12 files used</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtTemplatesPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Templates (11 rendered)" class="TemplatesPanel">
+					
+					Templates
+					
+					
+						<br /><small>admin/change_list.html</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtCachePanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Cache calls from 1 backend" class="CachePanel">
+					
+					Cache
+					
+					
+						<br /><small>0 calls in 0.00ms</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+				<li class="djDebugPanelButton">
+					<input type="checkbox" data-cookie="djdtLoggingPanel" checked="checked" title="Disable for next and successive requests" />
+					
+						<a href="#" title="Log messages" class="LoggingPanel">
+					
+					Logging
+					
+					
+						<br /><small>0 messages</small>
+					
+					
+					
+						</a>
+					
+				</li>
+			
+		</ul>
+	</div>
+	<div class="djdt-hidden" id="djDebugToolbarHandle">
+		<span title="Show toolbar" id="djShowToolBarButton">&#171;</span>
+	</div>
+	
+		
+			<div id="VersionsPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Versions</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+	
+		
+			<div id="SettingsPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Settings from <code>admin_app.settings</code></h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="HeadersPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Headers</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="RequestPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Request</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="SQLPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>SQL queries from 1 connection</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="StaticFilesPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Static files (78 found, 12 used)</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="TemplatesPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Templates (11 rendered)</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="CachePanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Cache calls from 1 backend</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+		
+			<div id="LoggingPanel" class="djdt-panelContent">
+				<div class="djDebugPanelTitle">
+					<a href="" class="djDebugClose"></a>
+					<h3>Log messages</h3>
+				</div>
+				<div class="djDebugPanelContent">
+					
+					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
+					<div class="djdt-scroll"></div>
+					
+				</div>
+			</div>
+		
+	
+	<div id="djDebugWindow" class="djdt-panelContent"></div>
+</div>
+</body>
+</html>
