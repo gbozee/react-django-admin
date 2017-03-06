@@ -1,605 +1,2108 @@
 <!DOCTYPE html>
+<html lang="en_NG">
 
-<html lang="en-us" >
 <head>
-<title>Select user to change | Django site admin</title>
-<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
-  <link rel="stylesheet" type="text/css" href="/static/admin/css/changelists.css" />
-  
-  
-    <script type="text/javascript" src="/admin/jsi18n/"></script>
-  
-  
-  
-
-
-
-
-<script type="text/javascript" src="/static/admin/js/core.js"></script>
-<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
-<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
-<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
-<script type="text/javascript" src="/static/admin/js/actions.js"></script>
-<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
-<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
-<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
-
-<meta name="robots" content="NONE,NOARCHIVE" />
+	<script type="text/javascript">
+		window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) { function r(n) { if (!t[n]) { var o = t[n] = { exports: {} }; e[n][0].call(o.exports, function (t) { var o = e[n][1][t]; return r(o || t) }, o, o.exports) } return t[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++)r(n[o]); return r }({ 1: [function (e, t, n) { function r() { } function o(e, t, n) { return function () { return i(e, [(new Date).getTime()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this } } var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = NREUM; "undefined" == typeof window.newrelic && (newrelic = f); var s = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", p = l + "ixn-"; a(s, function (e, t) { f[t] = o(l + t, !0, "api") }), f.addPageAction = o(l + "addPageAction", !0), f.setCurrentRouteName = o(l + "routeName", !0), t.exports = newrelic, f.interaction = function () { return (new r).get() }; var d = r.prototype = { createTracer: function (e, t) { var n = {}, r = this, o = "function" == typeof t; return i(p + "tracer", [Date.now(), e, n], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [Date.now(), r, o], n), o) try { return t.apply(this, arguments) } finally { c.emit("fn-end", [Date.now()], n) } } } }; a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) { d[t] = o(p + t) }), newrelic.noticeError = function (e) { "string" == typeof e && (e = new Error(e)), i("err", [e, (new Date).getTime()]) } }, {}], 2: [function (e, t, n) { function r(e, t) { var n = [], r = "", i = 0; for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], 3: [function (e, t, n) { function r(e, t, n) { t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0); for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = e[t + r]; return i } t.exports = r }, {}], ee: [function (e, t, n) { function r() { } function o(e) { function t(e) { return e && e instanceof r ? e : e ? c(e, u, i) : i() } function n(n, r, o) { if (!p.aborted) { e && e(n, r, o); for (var i = t(o), a = v(n), u = a.length, c = 0; c < u; c++)a[c].apply(i, r); var f = s[w[n]]; return f && f.push([y, n, r, i]), i } } function d(e, t) { b[e] = v(e).concat(t) } function v(e) { return b[e] || [] } function g(e) { return l[e] = l[e] || o(n) } function m(e, t) { f(e, function (e, n) { t = t || "feature", w[n] = t, t in s || (s[t] = []) }) } var b = {}, w = {}, y = { on: d, emit: n, get: g, listeners: v, context: t, buffer: m, abort: a, aborted: !1 }; return y } function i() { return new r } function a() { (s.api || s.feature) && (p.aborted = !0, s = p.backlog = {}) } var u = "nr@context", c = e("gos"), f = e(2), s = {}, l = {}, p = t.exports = o(); p.backlog = s }, {}], gos: [function (e, t, n) { function r(e, t, n) { if (o.call(e, t)) return e[t]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return e[t] = r, r } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], handle: [function (e, t, n) { function r(e, t, n, r) { o.buffer([e], r), o.emit(e, t, n) } var o = e("ee").get("handle"); t.exports = r, r.ee = o }, {}], id: [function (e, t, n) { function r(e) { var t = typeof e; return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () { return o++ }) } var o = 1, i = "nr@id", a = e("gos"); t.exports = r }, {}], loader: [function (e, t, n) { function r() { if (!h++) { var e = y.info = NREUM.info, t = l.getElementsByTagName("script")[0]; if (setTimeout(f.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return f.abort(); c(b, function (t, n) { e[t] || (e[t] = n) }), u("mark", ["onload", a()], null, "api"); var n = l.createElement("script"); n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t) } } function o() { "complete" === l.readyState && i() } function i() { u("mark", ["domContent", a()], null, "api") } function a() { return (new Date).getTime() } var u = e("handle"), c = e(2), f = e("ee"), s = window, l = s.document, p = "addEventListener", d = "attachEvent", v = s.XMLHttpRequest, g = v && v.prototype; NREUM.o = { ST: setTimeout, CT: clearTimeout, XHR: v, REQ: s.Request, EV: s.Event, PR: s.Promise, MO: s.MutationObserver }, e(1); var m = "" + location, b = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1016.min.js" }, w = v && g && g[p] && !/CriOS/.test(navigator.userAgent), y = t.exports = { offset: a(), origin: m, features: {}, xhrWrappable: w }; l[p] ? (l[p]("DOMContentLoaded", i, !1), s[p]("load", r, !1)) : (l[d]("onreadystatechange", o), s[d]("onload", r)), u("mark", ["firstbyte", a()], null, "api"); var h = 0 }, {}] }, {}, ["loader"]);
+	</script>
+	<script type="text/javascript">
+		window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "queueTime": 0, "licenseKey": "9431189497", "agent": "", "transactionName": "YFFUNUZUVkEHBxAPDlkbcBRaVkxbCQpLAgtWWlEOGlZXXBIWDQRPVlBbCFobV0ISDQsIEg1XXgBaUl1eDxcQORdeUUE=", "applicationID": "8164701", "errorBeacon": "bam.nr-data.net", "applicationTime": 682 }
+	</script>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/admin,_css,_base.css+admin,_css,_changelists.css+autocomplete_light,_style.css.pagespeed.cc.M4DDpzu759.css"
+	/>
+	<script type="text/javascript" src="/we-are-allowed/jsi18n/"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			function getCookie(name) {
+				var cookieValue = null;
+				if (document.cookie && document.cookie != '') {
+					var cookies = document.cookie.split(';');
+					for (var i = 0; i < cookies.length; i++) {
+						var cookie = jQuery.trim(cookies[i]);
+						// Does this cookie string begin with the name we want?
+						if (cookie.substring(0, name.length + 1) == (name + '=')) {
+							cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+							break;
+						}
+					}
+				}
+				return cookieValue;
+			}
+			function csrfSafeMethod(method) {
+				// these HTTP methods do not require CSRF protection
+				return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+			}
+			function sameOrigin(url) {
+				// test that a given url is a same-origin URL
+				// url could be relative or scheme relative or absolute
+				var host = document.location.host; // host + port
+				var protocol = document.location.protocol;
+				var sr_origin = '//' + host;
+				var origin = protocol + sr_origin;
+				// Allow absolute or scheme relative URLs to same origin
+				return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+					(url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+					// or any other URL that isn't scheme relative or absolute i.e relative.
+					!(/^(\/\/|http:|https:).*/.test(url));
+			}
+			$.ajaxSetup({
+				beforeSend: function (xhr, settings) {
+					if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+						// Send the token to same-origin, relative URLs only.
+						// Send the token only if the method warrants CSRF protection
+						// Using the CSRFToken value acquired earlier
+						xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+					}
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/static/autocomplete_light/django_admin.js.pagespeed.ce.7I6Zw9AYe5.js"></script>
+	<script type="text/javascript" src="/static/autocomplete_light/autocomplete.js.pagespeed.ce.LT7JrCGYT8.js"></script>
+	<script type="text/javascript" src="/static/autocomplete_light/widget.js.pagespeed.ce.NG58XxNZeU.js"></script>
+	<script type="text/javascript" src="/static/autocomplete_light/addanother.js.pagespeed.ce.k68p_Ekrg1.js"></script>
+	<script type="text/javascript" src="/static/autocomplete_light/text_widget.js.pagespeed.ce.0s3LHAQNFK.js"></script>
+	<script type="text/javascript" src="/static/autocomplete_light/remote.js.pagespeed.ce.Pa-VaTzUaG.js"></script>
+	<script type="text/javascript" src="/static/admin/js/core.js.pagespeed.ce.hNoE_L-ve2.js"></script>
+	<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.min.js.pagespeed.ce.-cev0Fcp8Q.js"></script>
+	<script type="text/javascript" src="/static/admin/js/jquery.init.js.pagespeed.ce.lbYvoZN45v.js"></script>
+	<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js.pagespeed.ce.s5Fuh3Doct.js"></script>
+	<script type="text/javascript" src="/static/admin/js/actions.min.js.pagespeed.ce.yNkeHQX-NX.js"></script>
+	<script type="text/javascript" src="/static/admin/js/urlify.js.pagespeed.ce.cvmybj7NEN.js"></script>
+	<script type="text/javascript" src="/static/admin/js/prepopulate.min.js.pagespeed.ce.9AV-u5tilo.js"></script>
+	<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.min.js.pagespeed.ce.yVOTuMpNk-.js"></script>
+	<script type="text/javascript">
+		(function ($) {
+			$(document).ready(function ($) {
+				$("tr input.action-select").actions();
+			});
+		})(django.jQuery);
+	</script>
+	<meta name="robots" content="NONE,NOARCHIVE" />
 </head>
 
+<body class=" app-account model-emailaddress change-list" data-admin-utc-offset="3600">
+	<!-- Container -->
+	<div id="container">
+		<!-- Header -->
+		<div id="header">
+			<div id="branding"></div>
+			<div id="user-tools">
+				Welcome,
+				<strong>Biola</strong> .
 
-<body class=" app-auth model-user change-list"
-  data-admin-utc-offset="3600">
 
-<!-- Container -->
-<div id="container">
 
-    
-    <!-- Header -->
-    <div id="header">
-        <div id="branding">
-        
-<h1 id="site-name"><a href="/admin/">Django administration</a></h1>
+				<a href="/">View site</a> /
 
-        </div>
-        
-        
-        <div id="user-tools">
-            
-                Welcome,
-                <strong>biola</strong>.
-            
-            
-                
-                    <a href="/">View site</a> /
-                
-                
-                    
-                    
-                
-                
-                <a href="/admin/password_change/">Change password</a> /
-                
-                <a href="/admin/logout/">Log out</a>
-            
-        </div>
-        
-        
-        
-    </div>
-    <!-- END Header -->
-    
-<div class="breadcrumbs">
-<a href="/admin/">Home</a>
-&rsaquo; <a href="/admin/auth/">Authentication and Authorization</a>
-&rsaquo; Users
-</div>
 
-    
 
-    
-        
-    
 
-    <!-- Content -->
-    <div id="content" class="flex">
-        
-        <h1>Select user to change</h1>
-        
-  <div id="content-main">
-    
-        <ul class="object-tools">
-          
-            
-            <li>
-              
-              <a href="/admin/auth/user/add/" class="addlink">
-                Add user
+
+
+				<a href="/we-are-allowed/password_change/">Change password</a> /
+
+				<a href="/we-are-allowed/logout/">Log out</a>
+			</div>
+		</div>
+		<!-- END Header -->
+		<div class="breadcrumbs">
+			<a href="/we-are-allowed/">Home</a> &rsaquo;
+			<a href="/we-are-allowed/account/">Accounts</a> &rsaquo;Email addresses
+
+		</div>
+		<!-- Content -->
+		<div id="content" class="flex">
+			<h1>Select email address to change</h1>
+			<div id="content-main">
+				<ul class="object-tools">
+					<li>
+						<a href="/we-are-allowed/account/emailaddress/add/" class="addlink">Add email address
               </a>
-            </li>
-            
-          
-        </ul>
-    
-    
-    <div class="module filtered" id="changelist">
-      
+					</li>
+				</ul>
+				<div class="module filtered" id="changelist">
+					<div id="toolbar">
+						<form id="changelist-search" method="get">
+							<div>
+								<!-- DIV needed for valid HTML -->
+								<label for="searchbar">
+                                        <script data-pagespeed-no-defer>
+											(function () {
+												var g = this;
+												function h(b, d) {
+													var a = b.split(".")
+														, c = g;
+													a[0] in c || !c.execScript || c.execScript("var " + a[0]);
+													for (var e; a.length && (e = a.shift());)
+														a.length || void 0 === d ? c[e] ? c = c[e] : c = c[e] = {} : c[e] = d
+												}
+												; function l(b) {
+													var d = b.length;
+													if (0 < d) {
+														for (var a = Array(d), c = 0; c < d; c++)
+															a[c] = b[c];
+														return a
+													}
+													return []
+												}
+												; function m(b) {
+													var d = window;
+													if (d.addEventListener)
+														d.addEventListener("load", b, !1);
+													else if (d.attachEvent)
+														d.attachEvent("onload", b);
+													else {
+														var a = d.onload;
+														d.onload = function () {
+															b.call(this);
+															a && a.call(this)
+														}
+													}
+												}
+												; var n;
+												function p(b, d, a, c, e) {
+													this.h = b;
+													this.j = d;
+													this.l = a;
+													this.f = e;
+													this.g = {
+														height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+														width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+													};
+													this.i = c;
+													this.b = {};
+													this.a = [];
+													this.c = {}
+												}
+												function q(b, d) {
+													var a, c, e = d.getAttribute("data-pagespeed-url-hash");
+													if (a = e && !(e in b.c))
+														if (0 >= d.offsetWidth && 0 >= d.offsetHeight)
+															a = !1;
+														else {
+															c = d.getBoundingClientRect();
+															var f = document.body;
+															a = c.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop);
+															c = c.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft);
+															f = a.toString() + "," + c;
+															b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0,
+																a = a <= b.g.height && c <= b.g.width)
+														}
+													a && (b.a.push(e),
+														b.c[e] = !0)
+												}
+												p.prototype.checkImageForCriticality = function (b) {
+													b.getBoundingClientRect && q(this, b)
+												}
+													;
+												h("pagespeed.CriticalImages.checkImageForCriticality", function (b) {
+													n.checkImageForCriticality(b)
+												});
+												h("pagespeed.CriticalImages.checkCriticalImages", function () {
+													r(n)
+												});
+												function r(b) {
+													b.b = {};
+													for (var d = ["IMG", "INPUT"], a = [], c = 0; c < d.length; ++c)
+														a = a.concat(l(document.getElementsByTagName(d[c])));
+													if (0 != a.length && a[0].getBoundingClientRect) {
+														for (c = 0; d = a[c]; ++c)
+															q(b, d);
+														a = "oh=" + b.l;
+														b.f && (a += "&n=" + b.f);
+														if (d = 0 != b.a.length)
+															for (a += "&ci=" + encodeURIComponent(b.a[0]),
+																c = 1; c < b.a.length; ++c) {
+																var e = "," + encodeURIComponent(b.a[c]);
+																131072 >= a.length + e.length && (a += e)
+															}
+														b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(t())),
+															131072 >= a.length + e.length && (a += e),
+															d = !0);
+														u = a;
+														if (d) {
+															c = b.h;
+															b = b.j;
+															var f;
+															if (window.XMLHttpRequest)
+																f = new XMLHttpRequest;
+															else if (window.ActiveXObject)
+																try {
+																	f = new ActiveXObject("Msxml2.XMLHTTP")
+																} catch (k) {
+																	try {
+																		f = new ActiveXObject("Microsoft.XMLHTTP")
+																	} catch (v) { }
+																}
+															f && (f.open("POST", c + (-1 == c.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)),
+																f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"),
+																f.send(a))
+														}
+													}
+												}
+												function t() {
+													var b = {}
+														, d = document.getElementsByTagName("IMG");
+													if (0 == d.length)
+														return {};
+													var a = d[0];
+													if (!("naturalWidth" in a && "naturalHeight" in a))
+														return {};
+													for (var c = 0; a = d[c]; ++c) {
+														var e = a.getAttribute("data-pagespeed-url-hash");
+														e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = {
+															rw: a.width,
+															rh: a.height,
+															ow: a.naturalWidth,
+															oh: a.naturalHeight
+														})
+													}
+													return b
+												}
+												var u = "";
+												h("pagespeed.CriticalImages.getBeaconData", function () {
+													return u
+												});
+												h("pagespeed.CriticalImages.Run", function (b, d, a, c, e, f) {
+													var k = new p(b, d, a, e, f);
+													n = k;
+													c && m(function () {
+														window.setTimeout(function () {
+															r(k)
+														}, 0)
+													})
+												});
+											})();
 
-<div id="toolbar"><form id="changelist-search" method="get">
-<div><!-- DIV needed for valid HTML -->
-<label for="searchbar"><img src="/static/admin/img/search.svg" alt="Search" /></label>
-<input type="text" size="40" name="q" value="" id="searchbar" autofocus />
-<input type="submit" value="Search" />
-
-
-</div>
-</form></div>
-
-
-      
-
-
-      
-        
-          <div id="changelist-filter">
-            <h2>Filter</h2>
-            
-<h3> By staff status </h3>
-<ul>
-
-    <li class="selected">
-    <a href="?">All</a></li>
-
-    <li>
-    <a href="?is_staff__exact=1">Yes</a></li>
-
-    <li>
-    <a href="?is_staff__exact=0">No</a></li>
-
-</ul>
-
-<h3> By superuser status </h3>
-<ul>
-
-    <li class="selected">
-    <a href="?">All</a></li>
-
-    <li>
-    <a href="?is_superuser__exact=1">Yes</a></li>
-
-    <li>
-    <a href="?is_superuser__exact=0">No</a></li>
-
-</ul>
-
-<h3> By active </h3>
-<ul>
-
-    <li class="selected">
-    <a href="?">All</a></li>
-
-    <li>
-    <a href="?is_active__exact=1">Yes</a></li>
-
-    <li>
-    <a href="?is_active__exact=0">No</a></li>
-
-</ul>
-
-          </div>
-        
-      
-
-      <form id="changelist-form" method="post" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='hJKD3dF36jUdr0SKf03HsQDPTnhLb6W2nFzbQFpugfioOMbmbRGkVLtQCt9HHPfT' />
-      
-
-      
-          
-<div class="actions">
-    <label>Action: <select name="action" required>
-<option value="" selected="selected">---------</option>
-<option value="delete_selected">Delete selected users</option>
-</select></label><input class="select-across" name="select_across" type="hidden" value="0" />
-    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
-    
-        <span class="action-counter" data-actions-icnt="1">0 of 1 selected</span>
-        
-    
-</div>
-
-          
-
-
-<div class="results">
-<table id="result_list">
-<thead>
-<tr>
-
-<th scope="col"  class="action-checkbox-column">
-   
-   <div class="text"><span><input type="checkbox" id="action-toggle" /></span></div>
-   <div class="clear"></div>
-</th>
-<th scope="col"  class="sortable column-username sorted ascending">
-   
-     
-       <div class="sortoptions">
-         <a class="sortremove" href="?o=" title="Remove from sorting"></a>
-         
-         <a href="?o=-1" class="toggle ascending" title="Toggle sorting"></a>
-       </div>
-     
-   
-   <div class="text"><a href="?o=-1">Username</a></div>
-   <div class="clear"></div>
-</th>
-<th scope="col"  class="sortable column-email">
-   
-     
-   
-   <div class="text"><a href="?o=2.1">Email address</a></div>
-   <div class="clear"></div>
-</th>
-<th scope="col"  class="sortable column-first_name">
-   
-     
-   
-   <div class="text"><a href="?o=3.1">First name</a></div>
-   <div class="clear"></div>
-</th>
-<th scope="col"  class="sortable column-last_name">
-   
-     
-   
-   <div class="text"><a href="?o=4.1">Last name</a></div>
-   <div class="clear"></div>
-</th>
-<th scope="col"  class="sortable column-is_staff">
-   
-     
-   
-   <div class="text"><a href="?o=5.1">Staff status</a></div>
-   <div class="clear"></div>
-</th>
-</tr>
-</thead>
-<tbody>
-
-
-<tr class="row1"><td class="action-checkbox"><input class="action-select" name="_selected_action" type="checkbox" value="1" /></td><th class="field-username"><a href="/admin/auth/user/1/change/">biola</a></th><td class="field-email">gbozee@example.com</td><td class="field-first_name">&nbsp;</td><td class="field-last_name">&nbsp;</td><td class="field-is_staff"><img src="/static/admin/img/icon-yes.svg" alt="True" /></td></tr>
-
-</tbody>
-</table>
-</div>
-
-
-          
-      
-      
-
-<p class="paginator">
-
-1 user
-
-
-</p>
-
-      </form>
-    </div>
-  </div>
-
-        
-        <br class="clear" />
-    </div>
-    <!-- END Content -->
-
-    <div id="footer"></div>
-</div>
-<!-- END Container -->
-
-
-<link rel="stylesheet" href="/static/debug_toolbar/css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="/static/debug_toolbar/css/toolbar.css" type="text/css" />
-
-<!-- Prevent our copy of jQuery from registering as an AMD module on sites that use RequireJS. -->
-<script src="/static/debug_toolbar/js/jquery_pre.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="/static/debug_toolbar/js/jquery_post.js"></script>
-
-<script src="/static/debug_toolbar/js/toolbar.js"></script>
-<div id="djDebug" class="djdt-hidden" dir="ltr"
-     data-store-id="f2ed0091ab7c46468d9a82a27760ad84" data-render-panel-url="/__debug__/render_panel/"
-     >
-	<div class="djdt-hidden" id="djDebugToolbar">
-		<ul id="djDebugPanelList">
-			
-			<li><a id="djHideToolBarButton" href="#" title="Hide toolbar">Hide &#187;</a></li>
-			
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtVersionsPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Versions" class="VersionsPanel">
-					
-					Versions
-					
-					
-						<br /><small>Django 1.10.6</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtTimerPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<div class="djdt-contentless">
-					
-					Time
-					
-					
-						<br /><small>Total: 144.91ms</small>
-					
-					
-					
+											pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon', 'https://www.tuteria.com/we-are-allowed/account/emailaddress/', 'blhkPf6lY8', true, false, 'Vm9Z9hhN4zg');
+										</script>
+                                        <img src="/static/admin/img/search.svg" alt="Search" data-pagespeed-url-hash="4155661181" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+                                    </label>
+								<input type="text" size="40" name="q" value="" id="searchbar" />
+								<input type="submit" value="Search" />
+							</div>
+						</form>
+					</div>
+					<script type="text/javascript">
+																																		  document.getElementById("searchbar").focus();
+					</script>
+					<div id="changelist-filter">
+						<h2>Filter</h2>
+						<h3>By primary </h3>
+						<ul>
+							<li class="selected">
+								<a href="?">All</a>
+							</li>
+							<li>
+								<a href="?primary__exact=1">Yes</a>
+							</li>
+							<li>
+								<a href="?primary__exact=0">No</a>
+							</li>
+						</ul>
+						<h3>By verified </h3>
+						<ul>
+							<li class="selected">
+								<a href="?">All</a>
+							</li>
+							<li>
+								<a href="?verified__exact=1">Yes</a>
+							</li>
+							<li>
+								<a href="?verified__exact=0">No</a>
+							</li>
+						</ul>
+					</div>
+					<form id="changelist-form" method="post" novalidate>
+						<input type='hidden' name='csrfmiddlewaretoken' value='CZseoyxU1Ui7LPv1v5lgyL2AhRBc2Lfd' />
+						<div class="actions">
+							<label>
+                                    Action: 
+                                    <select name="action">
+                                        <option value="" selected="selected">---------</option>
+                                        <option value="delete_selected">Delete selected email addresses</option>
+                                    </select>
+                                </label>
+							<input class="select-across" name="select_across" type="hidden" value="0" />
+							<button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+							<script type="text/javascript">
+								var _actions_icnt = "100";
+							</script>
+							<span class="action-counter">0 of 100 selected</span>
+							<span class="all">All 18742 selected</span>
+							<span class="question">
+                                    <a href="javascript:;" title="Click here to select the objects across all pages">Select all 18742 email addresses</a>
+                                </span>
+							<span class="clear">
+                                    <a href="javascript:;">Clear selection</a>
+                                </span>
 						</div>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtSettingsPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Settings from &lt;code&gt;admin_app.settings&lt;/code&gt;" class="SettingsPanel">
-					
-					Settings
-					
-					
-						
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtHeadersPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Headers" class="HeadersPanel">
-					
-					Headers
-					
-					
-						
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtRequestPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Request" class="RequestPanel">
-					
-					Request
-					
-					
-						<br /><small>changelist_view</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtSQLPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="SQL queries from 1 connection" class="SQLPanel">
-					
-					SQL
-					
-					
-						<br /><small>6 queries in 1.50ms</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtStaticFilesPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Static files (78 found, 12 used)" class="StaticFilesPanel">
-					
-					Static files
-					
-					
-						<br /><small>12 files used</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtTemplatesPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Templates (11 rendered)" class="TemplatesPanel">
-					
-					Templates
-					
-					
-						<br /><small>admin/change_list.html</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtCachePanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Cache calls from 1 backend" class="CachePanel">
-					
-					Cache
-					
-					
-						<br /><small>0 calls in 0.00ms</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-				<li class="djDebugPanelButton">
-					<input type="checkbox" data-cookie="djdtLoggingPanel" checked="checked" title="Disable for next and successive requests" />
-					
-						<a href="#" title="Log messages" class="LoggingPanel">
-					
-					Logging
-					
-					
-						<br /><small>0 messages</small>
-					
-					
-					
-						</a>
-					
-				</li>
-			
-		</ul>
+						<div class="results">
+							<table id="result_list">
+								<thead>
+									<tr>
+										<th scope="col" class="action-checkbox-column">
+											<div class="text">
+												<span>
+                                                        <input type="checkbox" id="action-toggle"/>
+                                                    </span>
+											</div>
+											<div class="clear"></div>
+										</th>
+										<th scope="col" class="sortable column-email">
+											<div class="text">
+												<a href="?o=1">E-mail address</a>
+											</div>
+											<div class="clear"></div>
+										</th>
+										<th scope="col" class="sortable column-user">
+											<div class="text">
+												<a href="?o=2">User</a>
+											</div>
+											<div class="clear"></div>
+										</th>
+										<th scope="col" class="sortable column-primary">
+											<div class="text">
+												<a href="?o=3">Primary</a>
+											</div>
+											<div class="clear"></div>
+										</th>
+										<th scope="col" class="sortable column-verified">
+											<div class="text">
+												<a href="?o=4">Verified</a>
+											</div>
+											<div class="clear"></div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19647" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19647/change/">soluwawumiju@convenanttechnologies.com</a>
+										</th>
+										<td class="field-user nowrap">soluwawumiju@convenanttechnologies.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19646" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19646/change/">kizitotochi28@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">kizitotochi28@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19645" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19645/change/">morazulike2000@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">morazulike2000@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19644" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19644/change/">Steinzmme@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">Steinzmme@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19643" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19643/change/">oluwafemi.orekoya@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">oluwafemi.orekoya@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19642" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19642/change/">bama4rel@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">bama4rel@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19641" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19641/change/">meenahwumi@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">meenahwumi@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19640" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19640/change/">samdominate@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">samdominate@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19639" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19639/change/">azubuike_emeka@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">azubuike_emeka@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19638" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19638/change/">tajiferuke@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">tajiferuke@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19637" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19637/change/">akumbu.uche@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">akumbu.uche@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19636" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19636/change/">cnkamuke@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">cnkamuke@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19635" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19635/change/">mrkelvinebuka@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">mrkelvinebuka@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19634" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19634/change/">michael.ogolor@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">michael.ogolor@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19633" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19633/change/">clement.lanre@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">clement.lanre@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19632" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19632/change/">realfranklin@hotmail.com</a>
+										</th>
+										<td class="field-user nowrap">realfranklin@hotmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19631" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19631/change/">tuamategarthompson@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">tuamategarthompson@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19630" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19630/change/">temmy4tayo@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">temmy4tayo@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19629" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19629/change/">dianaabasiokop@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">dianaabasiokop@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19628" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19628/change/">oshobughie@outlook.com</a>
+										</th>
+										<td class="field-user nowrap">oshobughie@outlook.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19627" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19627/change/">surerichfoods@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">surerichfoods@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19626" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19626/change/">chiiazor03@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">chiiazor03@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19625" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19625/change/">ogundele.itunu@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ogundele.itunu@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19624" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19624/change/">eemeritus@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">eemeritus@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19623" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19623/change/">adewalejohnsona@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">adewalejohnsona@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19622" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19622/change/">anietim58@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">anietim58@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19621" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19621/change/">ifyomap@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ifyomap@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19620" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19620/change/">mike4ayo.gp@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">mike4ayo.gp@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19619" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19619/change/">henrobinson2@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">henrobinson2@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19618" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19618/change/">jimsy2ky@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">jimsy2ky@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19617" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19617/change/">kehinde.omotayod@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">kehinde.omotayod@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19616" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19616/change/">dayraylay@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">dayraylay@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19615" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19615/change/">abmus4real@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">abmus4real@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19614" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19614/change/">ziestwilky@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ziestwilky@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19613" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19613/change/">chukzpraize@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">chukzpraize@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19612" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19612/change/">abiodun.oyadiji@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">abiodun.oyadiji@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19611" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19611/change/">okubadejotaiwo@yahoo.co.uk</a>
+										</th>
+										<td class="field-user nowrap">okubadejotaiwo@yahoo.co.uk</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19610" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19610/change/">olusiadeolaelisbeth@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">olusiadeolaelisbeth@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19609" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19609/change/">adelabu_adetola@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">adelabu_adetola@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19608" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19608/change/">needlessie@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">needlessie@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19607" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19607/change/">agboolaoladayo89@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">agboolaoladayo89@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19606" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19606/change/">felixchngwony@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">felixchngwony@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19605" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19605/change/">ishmaeloluwatobi@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ishmaeloluwatobi@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19604" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19604/change/">ginikanwaamauche@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ginikanwaamauche@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19603" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19603/change/">Ade_tee25@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">Ade_tee25@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19602" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19602/change/">tsavsamuel@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">tsavsamuel@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19601" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19601/change/">ego.nwamaka@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">ego.nwamaka@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19600" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19600/change/">wolexolajide@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">wolexolajide@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19599" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19599/change/">stanleyboroh@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">stanleyboroh@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19598" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19598/change/">jimiteck@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">jimiteck@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19597" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19597/change/">giftfunmi@ymail.com</a>
+										</th>
+										<td class="field-user nowrap">giftfunmi@ymail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19596" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19596/change/">tolulopefamakinde@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">tolulopefamakinde@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19595" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19595/change/">olatokunboalege@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">olatokunboalege@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19594" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19594/change/">ojibetsy@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ojibetsy@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19593" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19593/change/">adebayog111@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">adebayog111@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19592" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19592/change/">uche_asia@yahoo.co.uk</a>
+										</th>
+										<td class="field-user nowrap">uche_asia@yahoo.co.uk</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19591" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19591/change/">favourokala7@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">favourokala7@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19590" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19590/change/">chimdee127@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">chimdee127@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19589" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19589/change/">esther.onyeche@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">esther.onyeche@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19588" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19588/change/">boyosticalus@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">boyosticalus@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19587" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19587/change/">jeddypatricks@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">jeddypatricks@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19586" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19586/change/">emma2014onheavenride@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">emma2014onheavenride@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19585" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19585/change/">alaomonsuru@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">alaomonsuru@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19584" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19584/change/">nwigwegodswill@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">nwigwegodswill@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19583" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19583/change/">christ_bel@yahoo.co.uk</a>
+										</th>
+										<td class="field-user nowrap">christ_bel@yahoo.co.uk</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19582" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19582/change/">omowunmi4321@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">omowunmi4321@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19581" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19581/change/">fatoyeadedire@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">fatoyeadedire@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19580" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19580/change/">bnayo@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">bnayo@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19579" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19579/change/">hismaheelbolaji98@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">hismaheelbolaji98@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19578" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19578/change/">merichika@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">merichika@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19577" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19577/change/">yusuf_aina@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">yusuf_aina@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19576" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19576/change/">demeasabe@ymail.com</a>
+										</th>
+										<td class="field-user nowrap">demeasabe@ymail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19575" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19575/change/">favourablejc@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">favourablejc@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19574" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19574/change/">ybello2012@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ybello2012@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19573" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19573/change/">dairoolakunle392@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">dairoolakunle392@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19572" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19572/change/">veraalex561@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">veraalex561@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19571" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19571/change/">paulasher113@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">paulasher113@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19570" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19570/change/">venizika45@yahoo.co.uk</a>
+										</th>
+										<td class="field-user nowrap">venizika45@yahoo.co.uk</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19569" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19569/change/">mondaymathsu10@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">mondaymathsu10@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19568" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19568/change/">ngmedani@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ngmedani@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19567" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19567/change/">patiencestewart53@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">patiencestewart53@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19566" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19566/change/">vickadewole@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">vickadewole@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19565" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19565/change/">adepojukenny@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">adepojukenny@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19564" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19564/change/">Skebedeeozo@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">Skebedeeozo@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19563" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19563/change/">ezehikechukwu1@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">ezehikechukwu1@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19562" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19562/change/">4lyfvictor@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">4lyfvictor@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19561" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19561/change/">kayode_kofoworolaisaac@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">kayode_kofoworolaisaac@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19560" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19560/change/">scholasbb@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">scholasbb@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19559" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19559/change/">sowaleadetayo@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">sowaleadetayo@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19558" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19558/change/">davidkc2013@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">davidkc2013@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19557" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19557/change/">bcncyril3@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">bcncyril3@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19556" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19556/change/">demolaajagbe@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">demolaajagbe@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19555" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19555/change/">deborahtemitope747@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">deborahtemitope747@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19554" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19554/change/">marylacool2@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">marylacool2@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19553" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19553/change/">t2shittu@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">t2shittu@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19552" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19552/change/">dave.nwogu220@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">dave.nwogu220@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19551" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19551/change/">g_voke@yahoo.co.uk</a>
+										</th>
+										<td class="field-user nowrap">g_voke@yahoo.co.uk</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19550" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19550/change/">akatuevelyn@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">akatuevelyn@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-no.svg" alt="False" data-pagespeed-url-hash="3368880104" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row1">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19549" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19549/change/">matthewbraimoh@yahoo.com</a>
+										</th>
+										<td class="field-user nowrap">matthewbraimoh@yahoo.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+									<tr class="row2">
+										<td class="action-checkbox">
+											<input class="action-select" name="_selected_action" type="checkbox" value="19548" />
+										</td>
+										<th class="field-email">
+											<a href="/we-are-allowed/account/emailaddress/19548/change/">angiesmiles908@gmail.com</a>
+										</th>
+										<td class="field-user nowrap">angiesmiles908@gmail.com</td>
+										<td class="field-primary">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+										<td class="field-verified">
+											<img src="/static/admin/img/icon-yes.svg" alt="True" data-pagespeed-url-hash="1667187604" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+											/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="paginator">
+							<span class="this-page">1</span>
+							<a href="?p=1">2</a>
+							<a href="?p=2">3</a>
+							<a href="?p=3">4</a> ...
+
+							<a href="?p=186">187</a>
+							<a href="?p=187" class="end">188</a> 18742 email addresses
+
+
+
+						</p>
+					</form>
+				</div>
+			</div>
+			<br class="clear" />
+		</div>
+		<!-- END Content -->
+		<div id="footer"></div>
 	</div>
-	<div class="djdt-hidden" id="djDebugToolbarHandle">
-		<span title="Show toolbar" id="djShowToolBarButton">&#171;</span>
-	</div>
-	
-		
-			<div id="VersionsPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Versions</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-	
-		
-			<div id="SettingsPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Settings from <code>admin_app.settings</code></h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="HeadersPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Headers</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="RequestPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Request</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="SQLPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>SQL queries from 1 connection</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="StaticFilesPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Static files (78 found, 12 used)</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="TemplatesPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Templates (11 rendered)</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="CachePanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Cache calls from 1 backend</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-		
-			<div id="LoggingPanel" class="djdt-panelContent">
-				<div class="djDebugPanelTitle">
-					<a href="" class="djDebugClose"></a>
-					<h3>Log messages</h3>
-				</div>
-				<div class="djDebugPanelContent">
-					
-					<img src="/static/debug_toolbar/img/ajax-loader.gif" alt="loading" class="djdt-loader" />
-					<div class="djdt-scroll"></div>
-					
-				</div>
-			</div>
-		
-	
-	<div id="djDebugWindow" class="djdt-panelContent"></div>
-</div>
+	<!-- END Container -->
 </body>
+
 </html>
