@@ -1,0 +1,5 @@
+flask-graphql==1.4.1
+graphene==1.4.1
+flask-cors==3.0.3
+django==1.11.3
+django-debug-toolbar==1.8

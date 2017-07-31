@@ -1,35 +1,11 @@
 import React from 'react';
 import './styles/css/changelists.css';
-const Header = () => {
-    return (
-        <div id="header">
-            <div id="branding">
-                <h1 id="site-name"><a href="/admin/">Django administration</a></h1>
-            </div>
-            <div id="user-tools">
-                Welcome,
-                <strong> biola </strong>.
-                    <a href="/"> View site </a> /
-                <a href="/admin/password_change/"> Change password </a> /
-                <a href="/admin/logout/"> Log out</a>
-            </div>
-        </div>
-    )
-}
-const BreadCrumb = () => {
-    return (
-        <div className="breadcrumbs">
-            <a href="/admin/">Home </a>
-            &rsaquo;
-            <a href="/admin/auth/"> Authentication and Authorization </a>
-            &rsaquo; Users
-</div>
+import {Page, SiteContent} from './utils'
 
-
-    )
-}
 const SearchForm = () => {
     return (
+        <div id="toolbar">
+                
         <form id="changelist-search" method="get">
             <div>
                 <label for="searchbar"><img src="/styles/img/search.svg" alt="Search" /></label>
@@ -37,6 +13,7 @@ const SearchForm = () => {
                 <input type="submit" value="Search" />
             </div>
         </form>
+        </div>
     )
 }
 const ChangeListFilter = () => {
@@ -159,36 +136,23 @@ const ChangeListView = () => {
         </form>
     )
 }
-const SiteContent = () => {
+
+
+const Changelist = () => {
+    const model={
+    app_name:"Authentication and Authorization",
+    verbose_name: "Users"
+}
     return (
-        <div id="content" className="flex" >
-            <h1>Select user to change</h1>
-            <ul className="object-tools">
-                <li>
-                    <a href="/admin/auth/user/add/" className="addlink">
-                        Add user </a>
-                </li>
-            </ul>
-            <div className="module filtered" id="changelist">
-                <div id="toolbar">
-                    <SearchForm />
-                </div>
+        <Page className="app-auth model-user change-list"
+            model={model}>
+            <SiteContent headerText="Select user to change">
+                <SearchForm />
                 <ChangeListFilter />
                 <ChangeListView />
-            </div>
-        </div>
+            </SiteContent>
+        </Page>
     )
-}
-const Changelist = () => {
-    return (
-        <div className="app-auth model-user change-list">
-            <div id="container">
-                <Header />
-                <BreadCrumb />
-                <SiteContent />
-                <div id="footer"></div>
-            </div>
-        </div>)
 }
 
 export default Changelist
