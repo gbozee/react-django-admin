@@ -3,7 +3,7 @@ import {Page, SiteContent} from './utils'
 
 const PasswordChange = ()=>(
     <Page className="app-auth model-user change-list"
-            model={{app_name:"Auth",model:"English"}}>
+            urls={[{url:"",text:"Password Change"}]}>
             <SiteContent headerText="Select user to change">
                 
             </SiteContent>
