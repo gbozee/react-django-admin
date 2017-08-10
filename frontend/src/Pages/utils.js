@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+
 const Header = () => {
   return (
     <div id="header">
@@ -84,12 +86,14 @@ export const AppModule = ({ verbose_name, app, modules }) => {
     </div>
   )
 }
-export const Page = ({ children, urls, className }) => {
+
+
+export const Page = ({ children, urls, className, bread_crumb=true }) => {
   return (
     <div className={className}>
       <div id="container">
         <Header />
-        <BreadCrumb urls={urls} />
+        {bread_crumb ? <BreadCrumb urls={urls} />: null}
         {children}
         <div id="footer" />
       </div>
