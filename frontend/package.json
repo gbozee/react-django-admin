@@ -11,7 +11,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
     "prettier": "^1.5.3",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.11"
   },
   "scripts": {
     "start": "react-scripts start",

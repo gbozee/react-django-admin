@@ -1,24 +1,16 @@
+//@flow
 import React from "react";
 import { Page, SiteContent, AppModule } from "./utils";
 
-const Modellist = () => {
+const Modellist = ({app}) => {
   return (
     <Page
       className="dashboard app-auth"
-      urls={[{ text: "Authentication and Authorization" }]}
+      urls={[{ text: app.verbose_name }]}
     >
-      <SiteContent headerText="Authentication and Authorization administration">
+      <SiteContent headerText={`${app.verbose_name} administration`}>
         <div id="content-main">
-          <AppModule
-            {...{
-              verbose_name: "Authentication and Authorization",
-              app: "auth",
-              modules: [
-                { name: "Groups", path: "group" },
-                { name: "Users", path: "user" }
-              ]
-            }}
-          />
+          <AppModule {...app} />
         </div>
       </SiteContent>
     </Page>
