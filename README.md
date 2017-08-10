@@ -1,7 +1,9 @@
 ## React Django Admin
 
-Demo: [https://react-django-admin-lqzrcspcxz.now.sh/](https://react-django-admin-lqzrcspcxz.now.sh/)
-
+Demo: 
+Frontend [https://react-django-admin-lqzrcspcxz.now.sh/](https://react-django-admin-lqzrcspcxz.now.sh/)
+ 
+ Backend: [https://react-django-admin-server-qxcmiakwqa.now.sh/](https://react-django-admin-server-qxcmiakwqa.now.sh/)
 
 This project aims to implement the django-admin on the client using [ReactJS](https://facebook.github.io/react/). The frontend can be implemented in any frontend framework since the designs of [Django Web Framework](https://www.djangoproject.com/) Admin is used
 
@@ -64,6 +66,24 @@ Getting the details of the HTML is highlighted as follows
 This HTML can then be broken down into components which can be composed. 
 
 A sample currently exists in the repo.
+
+### Backend Developers
+The backend is implemented with python in mind and makes use of both [Django]() and [Flask]()
+
+The goal of the backend is to implement a reusable app based on the backend of choice that can help in generating the schemas required by the frontend based on a specific convention.
+
+This projects specifically makes use the GraphQL implementation of python [Graphene]()
+
+To get started on working on the backend, Do the following
+
+Ensure you have [Python 3](https://www.python.org/downloads/) installed and [Virtualenv](https://virtualenv.pypa.io/en/stable/)
+
+    # From the root folder in a new Terminal
+    $ virtualenv venv
+    $ pip install -r server/requirements.txt
+    $ python server/src/manage.py runserver
+
+The default username/password for the admin is `demo/demo`
 
 **NB**
 This is a new project and is highly experimental. Chances are it won't be easily customizable and would take the default look of django admin.
