@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Dashboard from "./Pages/Dashboard";
 import ChangeList from "./Pages/Changelist";
+import ChangeForm from './Pages/ChangeForm'
 import ModelList from "./Pages/Modellist";
 import PasswordChange from "./Pages/PasswordChange";
 import Router from "react-router-dom/BrowserRouter";
@@ -42,7 +43,8 @@ class App extends Component {
               return <ModelList app={application} />;
             }}
           />
-          <Route path="/:app/:model/" component={ChangeList} />
+          <Route exact path="/:app/:model/" component={ChangeList} />
+          <Route path="/:app/:model/:id/change/" component={ChangeForm} />
           <Route path="/password_change" component={PasswordChange} />
           <Route path="/logout" component={Dashboard} />
         </div>

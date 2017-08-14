@@ -1,9 +1,9 @@
 ## React Django Admin
 
 Demo: 
-Frontend [https://react-django-admin-lqzrcspcxz.now.sh/](https://react-django-admin-lqzrcspcxz.now.sh/)
+Frontend [https://react-django-admin.now.sh/](https://react-django-admin.now.sh/)
  
- Backend: [https://react-django-admin-server-qxcmiakwqa.now.sh/](https://react-django-admin-server-qxcmiakwqa.now.sh/)
+ Backend: [https://react-django-admin-server.now.sh/](https://react-django-admin-server.now.sh/)
 
 This project aims to implement the django-admin on the client using [ReactJS](https://facebook.github.io/react/). The frontend can be implemented in any frontend framework since the designs of [Django Web Framework](https://www.djangoproject.com/) Admin is used
 

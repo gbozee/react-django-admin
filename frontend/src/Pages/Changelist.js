@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/css/changelists.css";
 import { Page, SiteContent } from "./utils";
+import { Link } from "react-router-dom";
 
 const SearchForm = () => {
   return (
@@ -112,9 +113,11 @@ const ActionForm = () => {
 };
 const ColumnHead = ({ field, text, order = false }) => {
   return (
-    <th scope="col" className={`${order?"sortable":""} column-${field}"`}>
+    <th scope="col" className={`${order ? "sortable" : ""} column-${field}"`}>
       <div className="text">
-        <a href="?o=2.1">{text}</a>
+        <a href="?o=2.1">
+          {text}
+        </a>
       </div>
       <div className="clear" />
     </th>
@@ -155,7 +158,7 @@ const ChangeListResult = () => {
               </div>
               <div className="clear" />
             </th>
-            <ColumnHead field="email" order text="Email address"/>
+            <ColumnHead field="email" order text="Email address" />
             <ColumnHead field="first_name" order text="First name" />
             <ColumnHead field="last_name" order text="Last name" />
             <ColumnHead field="is_staff" order text="Staff status" />
@@ -172,7 +175,7 @@ const ChangeListResult = () => {
               />
             </td>
             <th className="field-username">
-              <a href="/admin/auth/user/1/change/">biola</a>
+              <Link to="/auth/user/1/change/">biola</Link>
             </th>
             <td className="field-email">gbozee@example.com</td>
             <td className="field-first_name">&nbsp;</td>
