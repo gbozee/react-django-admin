@@ -25,7 +25,7 @@ SECRET_KEY = '@9lux_=jn(u)fu)zl8+0u&bxg0!vx7r&b(u)!19glyn_(!+$kj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["react-django-admin-server"]
 
 
 # Application definition
