@@ -122,4 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-INTERNAL_IPS = ['127.0.0.1','react-django-admin-server']
+INTERNAL_IPS = ['127.0.0.1','react-django-admin-server','localhost']
+ALLOWED_HOSTS = INTERNAL_IPS

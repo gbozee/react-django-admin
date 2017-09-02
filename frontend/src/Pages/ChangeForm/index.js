@@ -420,7 +420,8 @@ const FourthFieldset = () =>
       </div>
     </div>
   </fieldset>;
-const ChangeForm = () =>
+const ChangeForm = () =>{
+  return (
   <Page className="app-auth model-user change-form" urls={urls}>
     <SiteContent addButton headerText="Change User">
       <div id="content-main">
@@ -473,6 +474,9 @@ const ChangeForm = () =>
         </form>
       </div>
     </SiteContent>
-  </Page>;
+  </Page>
+
+  )
+  };
 
 export default ChangeForm;

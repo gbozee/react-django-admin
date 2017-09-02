@@ -111,19 +111,70 @@ const ActionForm = () => {
     </div>
   );
 };
-const ColumnHead = ({ field, text, order = false }) => {
+const ColumnHead = ({
+  field,
+  text,
+  order = false,
+  sorted = false,
+  sorting_order = "ascending"
+}) => {
   return (
-    <th scope="col" className={`${order ? "sortable" : ""} column-${field}"`}>
+    <th
+      scope="col"
+      className={`${order
+        ? `sortable ${sorted ? "sorted " + sorting_order : ""}`
+        : ""} column-${field}"`}
+    >
+      {sorted
+        ? <div className="sortoptions">
+            <a className="sortremove" href="?o=" title="Remove from sorting" />
+            <a
+              href="?o=-1"
+              className={`toggle ${sorting_order}`}
+              title="Toggle sorting"
+            />
+          </div>
+        : null}
       <div className="text">
-        <a href="?o=2.1">
-          {text}
-        </a>
+        {order
+          ? <a href="?o=2.1">
+              {text}
+            </a>
+          : <span>
+              {text}
+            </span>}
       </div>
       <div className="clear" />
     </th>
   );
 };
-const ChangeListResult = () => {
+const Row = ({ keys, value, display_link = false, pk }) => {
+  return (
+    <th className={`field-${keys}`}>
+      {display_link
+        ? <Link to={`/auth/user/${pk}/change/`}>
+            {value}
+          </Link>
+        : typeof value === "boolean"
+          ? <img
+              src={`/styles/img/icon-${value ? "yes" : "no"}.svg`}
+              alt={value}
+            />
+          : value}
+    </th>
+  );
+};
+const ChangeListResult = ({
+  heading,
+  data,
+  toggleIndividualSelect,
+  toggleSelectAll,
+  selectAll,
+  selectedValues
+}) => {
+  const isChecked = item => {
+    return selectedValues.indexOf(item.id) > -1;
+  };
   return (
     <div className="results">
       <table id="result_list">
@@ -132,72 +183,128 @@ const ChangeListResult = () => {
             <th scope="col" className="action-checkbox-column">
               <div className="text">
                 <span>
-                  <input type="checkbox" id="action-toggle" />
+                  <input
+                    type="checkbox"
+                    checked={selectAll}
+                    onChange={toggleSelectAll}
+                    id="action-toggle"
+                  />
                 </span>
               </div>
               <div className="clear" />
             </th>
-            <th
-              scope="col"
-              className="sortable column-username sorted ascending"
-            >
-              <div className="sortoptions">
-                <a
-                  className="sortremove"
-                  href="?o="
-                  title="Remove from sorting"
-                />
-                <a
-                  href="?o=-1"
-                  className="toggle ascending"
-                  title="Toggle sorting"
-                />
-              </div>
-              <div className="text">
-                <a href="?o=-1">Username</a>
-              </div>
-              <div className="clear" />
-            </th>
-            <ColumnHead field="email" order text="Email address" />
-            <ColumnHead field="first_name" order text="First name" />
-            <ColumnHead field="last_name" order text="Last name" />
-            <ColumnHead field="is_staff" order text="Staff status" />
+            {heading.map((heading, index) =>
+              <ColumnHead
+                field={heading.field}
+                text={heading.text}
+                order={!!heading.order}
+                sorted={!!heading.sorted}
+                sorting_order={heading.sorting_order}
+              />
+            )}
           </tr>
         </thead>
         <tbody>
-          <tr className="row1">
-            <td className="action-checkbox">
-              <input
-                className="action-select"
-                name="_selected_action"
-                type="checkbox"
-                value="1"
-              />
-            </td>
-            <th className="field-username">
-              <Link to="/auth/user/1/change/">biola</Link>
-            </th>
-            <td className="field-email">gbozee@example.com</td>
-            <td className="field-first_name">&nbsp;</td>
-            <td className="field-last_name">&nbsp;</td>
-            <td className="field-is_staff">
-              <img src="/styles/img/icon-yes.svg" alt="True" />
-            </td>
-          </tr>
+          {data.map((item, index) =>
+            <tr className="row1">
+              <td className="action-checkbox">
+                <input
+                  className="action-select"
+                  name="_selected_action"
+                  type="checkbox"
+                  checked={isChecked(item)}
+                  onChange={e => toggleIndividualSelect(e, item.id)}
+                  defaultValue={item.id}
+                />
+              </td>
+              {item.data.map((val, ind) =>
+                <Row
+                  keys={val.key}
+                  value={val.value}
+                  display_link={!!val.display_link}
+                  pk={item.id}
+                />
+              )}
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
   );
 };
-const ChangeListView = () => {
-  return (
-    <form id="changelist-form" method="post" noValidate>
-      <ActionForm />
-      <ChangeListResult />
-      <p class="paginator"> 1 user </p>
-    </form>
-  );
-};
+class ChangeListView extends React.Component {
+  state = {
+    selectAll: false,
+    selectedValues: [],
+    heading: [
+      {
+        field: "username",
+        text: "Username",
+        order: true,
+        sorted: true,
+        sorting_order: "ascending"
+      },
+      { field: "email", text: "Email address", order: true },
+      { field: "first_name", text: "First name", order: true },
+      { field: "last_name", text: "Last name", order: true },
+      { field: "is_staff", text: "Staff status", order: true }
+    ],
+    data: [
+      {
+        id: 1,
+        data: [
+          { key: "username", value: "biola", display_link: true },
+          { key: "email", value: "gbozee@example.com" },
+          { key: "first_name", value: "" },
+          { key: "last_name", value: "" },
+          { key: "is_staff", value: true }
+        ]
+      }
+    ]
+  };
+  toggleSelectAll = () => {
+    const values = this.state.data.map(x => x.id);
+    this.setState(state => ({
+      ...state,
+      selectedValues: !state.selectAll ? values : [],
+      selectAll: !state.selectAll
+    }));
+  };
+  toggleIndividualSelect = (e, value) => {
+    let index = this.state.selectedValues.indexOf(value);
+    const target = e.target.checked;
+    this.setState(state => {
+      let selectedValues = state.selectedValues;
+      if (target) {
+        if (index == -1) {
+          selectedValues.push(value);
+        }
+      } else {
+        if (index > -1) {
+          selectedValues.splice(index, 1);
+        }
+      }
+      return { ...state, selectedValues };
+    });
+  };
+
+  render() {
+    return (
+      <form id="changelist-form" method="post" noValidate>
+        <ActionForm />
+        <ChangeListResult
+          toggleIndividualSelect={this.toggleIndividualSelect}
+          toggleSelectAll={this.toggleSelectAll}
+          selectedValues={this.state.selectedValues}
+          selectAll={this.state.selectAll}
+          heading={this.state.heading}
+          data={this.state.data}
+        />
+        <p class="paginator"> 1 user </p>
+      </form>
+    );
+  }
+}
 
 const Changelist = () => {
   const urls = [
