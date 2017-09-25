@@ -1,7 +1,8 @@
 import React from "react";
-import "./styles/css/changelists.css";
-import { Page, SiteContent } from "./utils";
-import { Link } from "react-router-dom";
+import "../styles/css/changelists.css";
+import { Page, SiteContent } from "../utils";
+import { Link, Route } from "react-router-dom";
+import LinkFilterGroup from './LinkFilterGroup'
 
 const SearchForm = () => {
   return (
@@ -25,55 +26,8 @@ const SearchForm = () => {
     </div>
   );
 };
-const ChangeListFilter = () => {
-  const filters = [
-    {
-      name: "By staff status",
-      options: [
-        { path: "", name: "All" },
-        { path: "is_staff__exact=1", name: "Yes" },
-        { path: "is_staff__exact=0", name: "No" }
-      ]
-    },
-    {
-      name: "By superuser status",
-      options: [
-        { path: "", name: "All" },
-        { path: "is_superuser__exact=1", name: "Yes" },
-        { path: "is_superuser__exact=0", name: "No" }
-      ]
-    },
-    {
-      name: "By active",
-      options: [
-        { path: "", name: "All" },
-        { path: "is_active__exact=1", name: "Yes" },
-        { path: "is_active__exact=0", name: "No" }
-      ]
-    }
-  ];
-  return (
-    <div id="changelist-filter">
-      <h2>Filter</h2>
-      {filters.map((filt, index) =>
-        <div key={index}>
-          <h3>
-            {" "}{filt.name}{" "}
-          </h3>
-          <ul>
-            {filt.options.map((opt, new_index) =>
-              <li key={new_index} className={new_index === 0 ? "selected" : ""}>
-                <a href={`?${opt.path}`}>
-                  {opt.name}
-                </a>
-              </li>
-            )}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-};
+
+
 const ActionForm = () => {
   return (
     <div className="actions">
@@ -306,23 +260,68 @@ class ChangeListView extends React.Component {
   }
 }
 
-const Changelist = () => {
-  const urls = [
-    {
-      url: "/auth/",
-      text: "Authentication And Authorization"
-    },
-    { url: "", text: "Users" }
-  ];
-  return (
-    <Page className="app-auth model-user change-list" urls={urls}>
-      <SiteContent addButton headerText="Select user to change">
-        <SearchForm />
-        <ChangeListFilter />
-        <ChangeListView />
-      </SiteContent>
-    </Page>
-  );
+class Changelist extends React.Component {
+  state = {
+    currentUrl: "/auth/user"
+  }
+  updateUrl = (currentUrl)=>{
+    this.setState(state=>({...state,currentUrl}))
+  };
+  render(){
+      const urls = [
+        {
+          url: "/auth/",
+          text: "Authentication And Authorization"
+        },
+        { url: "user", text: "Users" }
+      ];
+      const filters = [
+        {
+          name: "By staff status",
+          options: [
+            { path: "", name: "All" },
+            { path: "is_staff__exact=1", name: "Yes" },
+            { path: "is_staff__exact=0", name: "No" }
+          ]
+        },
+        {
+          name: "By superuser status",
+          options: [
+            { path: "", name: "All" },
+            { path: "is_superuser__exact=1", name: "Yes" },
+            { path: "is_superuser__exact=0", name: "No" }
+          ]
+        },
+        {
+          name: "By active",
+          options: [
+            { path: "", name: "All" },
+            { path: "is_active__exact=1", name: "Yes" },
+            { path: "is_active__exact=0", name: "No" }
+          ]
+        }
+      ];
+      
+      const pathname = urls.map(x=>x.url).join("")
+      return (
+        <Page className="app-auth model-user change-list" urls={urls}>
+          <SiteContent addButton headerText="Select user to change">
+            <SearchForm />
+            <div id="changelist-filter">
+            <h2>Filter</h2>
+            {filters.map((filt, index) =>
+              <LinkFilterGroup pathname={pathname} 
+              currentUrl={this.state.currentUrl} 
+              updateParentUrl={this.updateUrl} 
+              key={index} 
+              heading={filt.name} options={filt.options} />
+            )}
+          </div>
+            <ChangeListView />
+          </SiteContent>
+        </Page>
+      );
+  }
 };
 
 export default Changelist;
