@@ -1,4 +1,4 @@
-import { getSearchString,getFullUrl } from "../utils";
+import { getSearchString,getFullUrl,getKeyOnly } from "../utils";
 
 function getObj(search) {
   return {
@@ -6,6 +6,7 @@ function getObj(search) {
     search
   };
 }
+
 describe("getSearchString", () => {
   describe("should return original object", () => {
     it("when no search string", () => {
@@ -53,6 +54,23 @@ describe("getSearchString", () => {
         );
         expect(result).toEqual(getObj("is_staff__exact=0&is_active__exact=1"));
       });
+      it("when option is an empty search string, it should remove the key", ()=>{
+        let result = getSearchString(
+          getObj(""),
+          currentUrl,
+          "is_staff__exact"
+        );
+        expect(result).toEqual(getObj("is_active__exact=1"));
+      })
+      it("when from the same sarch query",()=>{
+          let newUrl = "/auth/users?is_staff__exact=1";
+          let result = getSearchString(
+            getObj("is_active__exact=0"),
+            newUrl,
+            "is_staff__exact"
+          );
+          expect(result).toEqual(getObj("is_active__exact=0"));
+      })
     });
   });
 });
@@ -68,5 +86,12 @@ describe("getFullUrl",()=>{
     expect(getFullUrl(getObj("is_staff__exact=1&is_active__exact=1"))).toEqual(
       "/auth/users?is_staff__exact=1&is_active__exact=1"
     )
+  })
+})
+
+describe("getKey",()=>{
+  it("should return just the search without the equal to",()=>{
+    expect(getKeyOnly("")).toEqual("")
+    expect(getKeyOnly("is_staff__exact=1")).toEqual("is_staff__exact")
   })
 })

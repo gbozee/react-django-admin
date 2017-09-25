@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Route,withRouter } from "react-router-dom";
 
-import { getSearchString, getFullUrl } from "./utils";
+import { getSearchString, getFullUrl,getKeyOnly } from "./utils";
 const SimpleLink = ({ label, to }) =>
   <li>
     <a href={to}>
@@ -29,14 +29,15 @@ const FilterLink = ({ label, to, activeOnlyWhenExact, active, ...rest }) => {
   
 const ParentLink = ({ pathname, children, currentUrl = "/auth/user" }) => {
     const newChildren = React.Children.map(children, (child, index) => {
-      const { to, ...rest } = child.props;
+      const { to,pathNode, ...rest } = child.props;
       const node = React.createElement(FilterLink, {
         to: getSearchString(
             {
               pathname,
               search: to
             },
-            currentUrl
+            currentUrl,
+            getKeyOnly(pathNode)
           ),
         ...rest
       });
@@ -66,10 +67,18 @@ const ParentLink = ({ pathname, children, currentUrl = "/auth/user" }) => {
       const urlObj = getSearchString({
         pathname,
         search:options[index].path
-    },currentUrl)
+    },currentUrl,
+    getKeyOnly(this.getKeyFromOptions())
+)
     const fullUrl = getFullUrl(urlObj)
+    console.log(fullUrl)
     updateParentUrl(fullUrl)
     };
+    getKeyFromOptions = ()=>{
+        const {options} = this.props;
+        let oo = options.filter(x=> !!x.path)
+        return oo[0].path
+    }
     render(){
       const {heading,options,...rest} = this.props;
       return (
@@ -81,6 +90,7 @@ const ParentLink = ({ pathname, children, currentUrl = "/auth/user" }) => {
             onClick={() => {
               this.updateState(new_index);
             }}
+            pathNode={this.getKeyFromOptions()}
              label={opt.name} to={opt.path}
             active={this.state.currentIndex === new_index} />
           )}
