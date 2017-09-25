@@ -25,7 +25,7 @@ SECRET_KEY = '@9lux_=jn(u)fu)zl8+0u&bxg0!vx7r&b(u)!19glyn_(!+$kj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["react-django-admin-server.now.sh"]
 
 
 # Application definition
@@ -122,4 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-INTERNAL_IPS = ['127.0.0.1','react-django-admin-server']
+INTERNAL_IPS = ['127.0.0.1','react-django-admin-server','localhost']
+ALLOWED_HOSTS = INTERNAL_IPS

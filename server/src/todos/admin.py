@@ -5,4 +5,7 @@ from .models import Todo
 
 @admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
-    list_display = ['description','created','user','completed']
+    list_display = ['description','created','user','completed','custom']
+
+    def custom(self, obj):
+        return obj.completed
