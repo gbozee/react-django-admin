@@ -24,3 +24,4 @@ startup.sh
 *.pyc
 *__pycache__/
 *.vscode/
+*lerna-debug.log
