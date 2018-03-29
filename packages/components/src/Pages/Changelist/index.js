@@ -1,8 +1,6 @@
 import React from "react";
 import "../../styles/css/changelists.css";
 import { Page, SiteContent } from "../utils";
-import { Link, Route } from "react-router-dom";
-import LinkFilterGroup from './LinkFilterGroup'
 
 const SearchForm = () => {
   return (
@@ -26,7 +24,6 @@ const SearchForm = () => {
     </div>
   );
 };
-
 
 const ActionForm = () => {
   return (
@@ -75,46 +72,37 @@ const ColumnHead = ({
   return (
     <th
       scope="col"
-      className={`${order
-        ? `sortable ${sorted ? "sorted " + sorting_order : ""}`
-        : ""} column-${field}"`}
+      className={`${
+        order ? `sortable ${sorted ? "sorted " + sorting_order : ""}` : ""
+      } column-${field}"`}
     >
-      {sorted
-        ? <div className="sortoptions">
-            <a className="sortremove" href="?o=" title="Remove from sorting" />
-            <a
-              href="?o=-1"
-              className={`toggle ${sorting_order}`}
-              title="Toggle sorting"
-            />
-          </div>
-        : null}
+      {sorted ? (
+        <div className="sortoptions">
+          <a className="sortremove" href="?o=" title="Remove from sorting" />
+          <a
+            href="?o=-1"
+            className={`toggle ${sorting_order}`}
+            title="Toggle sorting"
+          />
+        </div>
+      ) : null}
       <div className="text">
-        {order
-          ? <a href="?o=2.1">
-              {text}
-            </a>
-          : <span>
-              {text}
-            </span>}
+        {order ? <a href="?o=2.1">{text}</a> : <span>{text}</span>}
       </div>
       <div className="clear" />
     </th>
   );
 };
-const Row = ({ keys, value, display_link = false, pk }) => {
+const Row = ({ keys, value, display_link = false, pk, Link }) => {
   return (
     <th className={`field-${keys}`}>
-      {display_link
-        ? <Link to={`/auth/user/${pk}/change/`}>
-            {value}
-          </Link>
-        : typeof value === "boolean"
-          ? <img
-              src={`/styles/img/icon-${value ? "yes" : "no"}.svg`}
-              alt={value}
-            />
-          : value}
+      {display_link ? (
+        <Link to={`/auth/user/${pk}/change/`}>{value}</Link>
+      ) : typeof value === "boolean" ? (
+        <img src={`/styles/img/icon-${value ? "yes" : "no"}.svg`} alt={value} />
+      ) : (
+        value
+      )}
     </th>
   );
 };
@@ -124,6 +112,7 @@ const ChangeListResult = ({
   toggleIndividualSelect,
   toggleSelectAll,
   selectAll,
+  Link,
   selectedValues
 }) => {
   const isChecked = item => {
@@ -147,7 +136,7 @@ const ChangeListResult = ({
               </div>
               <div className="clear" />
             </th>
-            {heading.map((heading, index) =>
+            {heading.map((heading, index) => (
               <ColumnHead
                 field={heading.field}
                 text={heading.text}
@@ -155,11 +144,11 @@ const ChangeListResult = ({
                 sorted={!!heading.sorted}
                 sorting_order={heading.sorting_order}
               />
-            )}
+            ))}
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) =>
+          {data.map((item, index) => (
             <tr className="row1">
               <td className="action-checkbox">
                 <input
@@ -171,16 +160,17 @@ const ChangeListResult = ({
                   defaultValue={item.id}
                 />
               </td>
-              {item.data.map((val, ind) =>
+              {item.data.map((val, ind) => (
                 <Row
+                  Link={Link}
                   keys={val.key}
                   value={val.value}
                   display_link={!!val.display_link}
                   pk={item.id}
                 />
-              )}
+              ))}
             </tr>
-          )}
+          ))}
         </tbody>
       </table>
     </div>
@@ -247,6 +237,7 @@ class ChangeListView extends React.Component {
       <form id="changelist-form" method="post" noValidate>
         <ActionForm />
         <ChangeListResult
+          Link={this.props.Link}
           toggleIndividualSelect={this.toggleIndividualSelect}
           toggleSelectAll={this.toggleSelectAll}
           selectedValues={this.state.selectedValues}
@@ -263,65 +254,73 @@ class ChangeListView extends React.Component {
 class Changelist extends React.Component {
   state = {
     currentUrl: "/auth/user"
-  }
-  updateUrl = (currentUrl)=>{
-    this.setState(state=>({...state,currentUrl}))
   };
-  render(){
-      const urls = [
-        {
-          url: "/auth/",
-          text: "Authentication And Authorization"
-        },
-        { url: "user", text: "Users" }
-      ];
-      const filters = [
-        {
-          name: "By staff status",
-          options: [
-            { path: "", name: "All" },
-            { path: "is_staff__exact=1", name: "Yes" },
-            { path: "is_staff__exact=0", name: "No" }
-          ]
-        },
-        {
-          name: "By superuser status",
-          options: [
-            { path: "", name: "All" },
-            { path: "is_superuser__exact=1", name: "Yes" },
-            { path: "is_superuser__exact=0", name: "No" }
-          ]
-        },
-        {
-          name: "By active",
-          options: [
-            { path: "", name: "All" },
-            { path: "is_active__exact=1", name: "Yes" },
-            { path: "is_active__exact=0", name: "No" }
-          ]
-        }
-      ];
-      
-      const pathname = urls.map(x=>x.url).join("")
-      return (
-        <Page className="app-auth model-user change-list" urls={urls}>
-          <SiteContent addButton headerText="Select user to change">
-            <SearchForm />
-            <div id="changelist-filter">
+  updateUrl = currentUrl => {
+    this.setState(state => ({ ...state, currentUrl }));
+  };
+  render() {
+    const urls = [
+      {
+        url: "/auth/",
+        text: "Authentication And Authorization"
+      },
+      { url: "user", text: "Users" }
+    ];
+    const filters = [
+      {
+        name: "By staff status",
+        options: [
+          { path: "", name: "All" },
+          { path: "is_staff__exact=1", name: "Yes" },
+          { path: "is_staff__exact=0", name: "No" }
+        ]
+      },
+      {
+        name: "By superuser status",
+        options: [
+          { path: "", name: "All" },
+          { path: "is_superuser__exact=1", name: "Yes" },
+          { path: "is_superuser__exact=0", name: "No" }
+        ]
+      },
+      {
+        name: "By active",
+        options: [
+          { path: "", name: "All" },
+          { path: "is_active__exact=1", name: "Yes" },
+          { path: "is_active__exact=0", name: "No" }
+        ]
+      }
+    ];
+
+    const pathname = urls.map(x => x.url).join("");
+    const FilterGroup = this.props.LinkFilterGroup;
+    return (
+      <Page
+        Link={this.props.Link}
+        className="app-auth model-user change-list"
+        urls={urls}
+      >
+        <SiteContent addButton headerText="Select user to change">
+          <SearchForm />
+          <div id="changelist-filter">
             <h2>Filter</h2>
-            {filters.map((filt, index) =>
-              <LinkFilterGroup pathname={pathname} 
-              currentUrl={this.state.currentUrl} 
-              updateParentUrl={this.updateUrl} 
-              key={index} 
-              heading={filt.name} options={filt.options} />
-            )}
+            {filters.map((filt, index) => (
+              <FilterGroup
+                pathname={pathname}
+                currentUrl={this.state.currentUrl}
+                updateParentUrl={this.updateUrl}
+                key={index}
+                heading={filt.name}
+                options={filt.options}
+              />
+            ))}
           </div>
-            <ChangeListView />
-          </SiteContent>
-        </Page>
-      );
+          <ChangeListView Link={this.props.Link} />
+        </SiteContent>
+      </Page>
+    );
   }
-};
+}
 
 export default Changelist;

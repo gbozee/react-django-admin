@@ -3126,13 +3126,13 @@ duplexify@^3.4.2, duplexify@^3.5.3:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-dynamic-cdn-webpack-plugin@^4.0.0-rc.1:
-  version "4.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/dynamic-cdn-webpack-plugin/-/dynamic-cdn-webpack-plugin-4.0.0-rc.1.tgz#91c317203bfc7ef7dc0f09a1918ede1941e5c702"
+dynamic-cdn-webpack-plugin@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/dynamic-cdn-webpack-plugin/-/dynamic-cdn-webpack-plugin-3.4.0.tgz#a88d674a84414b57616fef08f2d5e4bb158c8273"
   dependencies:
-    babel-runtime "^6.26.0"
-    html-webpack-include-assets-plugin "1.0.3"
-    read-pkg-up "^3.0.0"
+    babel-runtime "^6.23.0"
+    html-webpack-include-assets-plugin "0.0.7"
+    read-pkg-up "^2.0.0"
     resolve-pkg "^1.0.0"
 
 ecc-jsbn@~0.1.1:
@@ -4473,13 +4473,11 @@ html-tag-names@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/html-tag-names/-/html-tag-names-1.1.2.tgz#f65168964c5a9c82675efda882875dcb2a875c22"
 
-html-webpack-include-assets-plugin@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/html-webpack-include-assets-plugin/-/html-webpack-include-assets-plugin-1.0.3.tgz#ad1800bce0e7e689efdb83d0fca71da388521b6a"
+html-webpack-include-assets-plugin@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/html-webpack-include-assets-plugin/-/html-webpack-include-assets-plugin-0.0.7.tgz#74552e41bb368931be5f609b563cde811d1e7a26"
   dependencies:
-    glob "^7.1.2"
-    minimatch "^3.0.4"
-    slash "^1.0.0"
+    minimatch "^3.0.3"
 
 html-webpack-plugin@2.29.0:
   version "2.29.0"
@@ -6133,6 +6131,12 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.0, mkdi
 modify-values@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.0.tgz#e2b6cdeb9ce19f99317a53722f3dbf5df5eaaab2"
+
+module-to-cdn@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/module-to-cdn/-/module-to-cdn-3.1.2.tgz#d8b8d4f9a7009a239d358a2a568a02d5fa9a2bc6"
+  dependencies:
+    semver "^5.3.0"
 
 moment@^2.6.0:
   version "2.21.0"

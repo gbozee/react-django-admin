@@ -13,9 +13,9 @@ function rewirePreload(config, env) {
   config.plugins = [
     ...config.plugins,
     new DynamicCDNWebpackPlugin({ only: ["react", "react-dom"] }),
-    new CompressionPlugin({ test: /\.js/ }),
+    // new CompressionPlugin({ test: /\.js/ }),
     new PreloadWebpackPlugin({
-      rel: "prefetch"
+      rel: "preload"
     })
   ];
   return config;
