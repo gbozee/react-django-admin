@@ -2,11 +2,11 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Button } from "../src/Button";
+import App from "../src/App";
+import "../src/styles/css/base.css";
 
-storiesOf("Button", module)
-  .add("with text", () => (
-    <Button onClick={action("clicked")}>Hello Button</Button>
-  ))
+storiesOf("Django Admin React", module)
+  .add("App", () => <App />)
   .add("with some emoji", () => (
     <Button onClick={action("clicked")}>😀 😎 👍 💯</Button>
   ));

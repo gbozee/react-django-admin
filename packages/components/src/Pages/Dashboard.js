@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { AppModule, Page, SiteContent } from "./utils";
-import "./styles/css/dashboard.css";
+import "../styles/css/dashboard.css";
 
 class Dashboard extends Component {
   

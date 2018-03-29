@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/css/changelists.css";
+import "../../styles/css/changelists.css";
 import { Page, SiteContent } from "../utils";
 import { Link, Route } from "react-router-dom";
 import LinkFilterGroup from './LinkFilterGroup'

@@ -3,20 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router-dom": "4.1.2"
+    "components": "file:../components/src",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-loadable": "^5.3.1",
+    "react-router-dom": "4.2.2"
   },
   "devDependencies": {
+    "dynamic-cdn-webpack-plugin": "^4.0.0-rc.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
+    "preload-webpack-plugin": "^2.3.0",
     "prettier": "^1.5.3",
+    "react-app-rewired": "^1.5.0",
     "react-scripts": "1.0.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "react-app-rewired start",
+    "test": "react-app-rewired test --env=jsdom",
+    "recreate": "rm -rf node_modules && yarn install",
+    "build": "react-app-rewired build",
     "eject": "react-scripts eject"
   }
 }

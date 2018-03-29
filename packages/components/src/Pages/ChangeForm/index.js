@@ -1,7 +1,7 @@
 import React from "react";
 import { Page, SiteContent } from "../utils";
 import DateInput from "./components/DateTimeField";
-import "../styles/css/forms.css";
+import "../../styles/css/forms.css";
 const urls = [
   {
     url: "/auth/",
